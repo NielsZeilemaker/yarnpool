@@ -1,4 +1,4 @@
-\YARNBackend
+YARNBackend
 ===========
 
 A proof of concept extension of joblib which allows a sklearn script to
@@ -14,12 +14,11 @@ Running
 A minimal change is required to your existing scikit learn script:
 
 
-<code>
-from sklearn.externals.joblib.parallel import register_parallel_backend
+```python
+from sklearn.externals.joblib.parallel miport register_parallel_backend
 from yarnbackend import YarnBackend
-
 register_parallel_backend("default", YarnBackend)
-</code>
+```
 
 
 This will overwrite the current backend with the YarnBackend. However,
